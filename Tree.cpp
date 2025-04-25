@@ -51,6 +51,24 @@ void inorder(Node* root){
     inorder(root->right);
 
 }
+void preorder(Node* root){
+    if( root == nullptr){
+        return;
+    }
+    cout << root->data <<" "; 
+    preorder(root->left);
+    preorder(root->right);
+
+}
+void postorder(Node* root){
+    if( root == nullptr){
+        return;
+    }
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->data <<" "; 
+
+}
 int main(){
     Node* root = nullptr;
 
@@ -61,6 +79,11 @@ int main(){
         cin >> e;
         buildtree(root, e);
     } 
+    cout << "Inordered Traversal";
     inorder(root);
+    cout << "  \n Preordered Traversal" ;
+    preorder(root);
+    cout << " \n Preordered Traversal" ;
+    postorder(root);
     return 0;
 }
