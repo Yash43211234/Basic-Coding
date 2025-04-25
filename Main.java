@@ -11,7 +11,7 @@ class Node {
     }
 }
 
-class Tree {
+class BinaryTree {
     Node root;
 
     void buildTree(int x) {
@@ -60,14 +60,14 @@ class Tree {
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Tree t = new Tree();
+        BinaryTree t = new BinaryTree();
         int n = sc.nextInt();
         while (n-- > 0) {
             int e = sc.nextInt();
             t.buildTree(e);
         }
 
-        // Optional: print the tree
+        // Print level order traversal
         t.levelOrder();
     }
 }
